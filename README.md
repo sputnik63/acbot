@@ -74,11 +74,11 @@ If you don't have the RKS502A502A remote control you can use whatever remote con
 In this way the bot will show only a simple keyboard to switch ON or OFF the air conditioner and to schedule the switching. Moreover it will simply issue the commands ```irsed SEND_ONCE GENERIC ON``` or ```irsed SEND_ONCE GENERIC OFF```
 In order to achieve this goal you must only have a ```name GENERIC``` and the ```ON``` and ```OFF``` codes in your **lirc configuration file**
 
-Section ```[signal]```
+**Section ```[signal]```**
 It's used only if you set ```type=gpio``` in ```[interface]``` section.
 Here is the description of the signal: the durations of pulse and space in microseconds, the value of the frequency of the carrier in Hz, the file name in the ***./codes*** directory where the infrared signal decodification is stored.
 
-Section ```[common]```
+**Section ```[common]```**
 Here you can set the bot token, the debug level, the trace destination (on file and/or standard output).
 If the ```test=true``` key is set, no real device will be used and you can easily test the bot.
 
