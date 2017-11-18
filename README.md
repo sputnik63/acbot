@@ -92,6 +92,13 @@ Use translations setting the ``LANGUAGE`` environment variable to your language 
 export LANGUAGE=it_IT
 ```
 
+## Test
+In **test** directory there are files to send infrared signal using IrToy or pigpio by command line but without using the Telegram bot.
+
+## ToDo and known issues
+- [ ] Extract hardcoded parts of any particular remote control from acbot.py
+- [ ] After issue /stop the bot exit definitely and it does not restart sending /start
+
 ## Contributing
 Please feel free to contribute to the project with new infrared codes or devices or translating the strings in other languages.
 I've no other available air conditioners :smile: and I'd like to improve the ACBot code to be more "flexible" without any dependency from a particular remote control in the code. Actually some little part of the RKS502A502A are hardcoded in acbot.py. Only using Lirc you can be almost completely remote control independent
@@ -100,10 +107,6 @@ I beg pardon to all Python gurus for my bad Python: feel free to improve source 
 
 ## License
 This project is licensed under the GNU General Public License v2.0 License - see the [LICENSE.md](LICENSE.md) file for details
-
-## ToDo and known issues
-- [ ] Extract hardcoded parts of any particular remote control from acbot.py
-- [ ] After issue /stop the bot exit definitely and it does not restart sending /start
 
 ## Acknowledgments
 * Thanks to Chris LeBlanc for its work on [HackPump](https://github.com/crleblanc/hackPump) and [PyIrToy](https://github.com/crleblanc/PyIrToy) that heavily inspired me
