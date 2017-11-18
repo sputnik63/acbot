@@ -6,13 +6,13 @@ Use a Telegram bot to control your air conditioner using different devices (PC, 
 * an [IrToy v2](http://dangerousprototypes.com/docs/USB_IR_Toy_v2) connected to a PC USB port
 * an IrToy v2  connected to a Raspberry Pi USB port
 * a simple infrared LED connected to a GPIO of a Raspberry Pi (it needs [pigpio library](http://abyz.me.uk/rpi/pigpio/) or [Lirc](http://www.lirc.org/))
-* a simple infrared LED connected to a pin of [Arietta G25](https://www.acmesystems.it/arietta) (it needs [Lirc](http://www.lirc.org/))
+* a simple infrared LED connected to a pin of [Arietta G25](https://www.acmesystems.it/arietta) (it needs Lirc
 
 All has been tested using both Python 2 and 3 on a Linux PC, on Raspberry Pi and on Arietta G25, all Linux based systems :penguin: 
 I'm confident that all can work also on Windows systems.
 The only (at the moment) infrared remote control decoded in **./codes/** directory is the Mitsubishi **RKS502A502A** used for air conditioners models SRK 258 CENF-R, SRK 288 CENF-R, SRK 408 CENF-R
 It uses a sligth variation of infrared **__NEC protocol__** as I will describe better somewhere in the internet (coming soon).
-By the way, using Lirc, **__you can drive any remote control you have__**. See [Configuration file](Readme.md/###Configuration-file) section below.
+By the way, using Lirc, **__you can drive any remote control you have__**. See [Configuration file](README.md#configuration-file) section below.
 Since this is a Free Software project it's easy to modify it as you like and need. I'd like ACBot to be a unique project configurable according the needs of the users instead to have one project per infrared remote controls vendor.
 
 ## Getting Started
@@ -56,7 +56,7 @@ python acbot.py
 ```
 The Telegram bot will start: type ```/start``` in the bot chat and ... enjoy. Other commands managed: ```/menu``` and ```/stop``` (there is a known bug for this. See below)
 The keyboards used in the bot are quite user friendly and easy to understand.
-By default they reproduce all the settings present on the RKS502A502A remote control but using Lirc with a GENERIC remote control you can have a simpler keyboard. See [section about Lirc](Readme.md/#**Section-```[lirc]```**) in configuration file 
+By default they reproduce all the settings present on the RKS502A502A remote control but using Lirc with a GENERIC remote control you can have a simpler keyboard (see the section about Lirc in configuration file)
 
 ### Configuration file
 **Section ```[host]```**
