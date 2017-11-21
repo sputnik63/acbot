@@ -11,8 +11,8 @@ Use a Telegram bot to control your air conditioner using different devices (PC, 
 All has been tested using both Python 2 and 3 on a Linux PC, on Raspberry Pi and on Arietta G25, all Linux based systems :penguin: 
 I'm confident that all can work also on Windows systems.
 The only (at the moment) infrared remote control decoded in **./codes/** directory is the Mitsubishi **RKS502A502A** used for air conditioners models SRK 258 CENF-R, SRK 288 CENF-R, SRK 408 CENF-R
-It uses a sligth variation of infrared **__NEC protocol__** as I will describe better somewhere in the internet (coming soon).
-By the way, using Lirc, **__you can drive any remote control you have__**. See [Configuration file](README.md#configuration-file) section below.
+It uses a sligth variation of infrared **__NEC protocol__**; using Lirc, **__you can drive any remote control you have__**. See [Configuration file](README.md#configuration-file) section below.
+Anyway I decoded the infrared signal of my remote control and [here in these articles](http://useandshare.blogspot.it/2017/11/control-your-air-conditioner-with.html) is described the way I did it, so you can decode your own device to use with ACBot.
 Since this is a Free Software project it's easy to modify it as you like and need. I'd like ACBot to be a unique project configurable according the needs of the users instead to have one project per infrared remote controls vendor.
 
 ## Getting Started
