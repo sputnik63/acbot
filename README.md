@@ -6,7 +6,7 @@ Use a Telegram bot to control your air conditioner using different devices (PC, 
 * an [IrToy v2](http://dangerousprototypes.com/docs/USB_IR_Toy_v2) connected to a PC USB port
 * an IrToy v2  connected to a Raspberry Pi USB port
 * a simple infrared LED connected to a GPIO of a Raspberry Pi (it needs [pigpio library](http://abyz.me.uk/rpi/pigpio/) or [Lirc](http://www.lirc.org/))
-* a simple infrared LED connected to a pin of [Arietta G25](https://www.acmesystems.it/arietta) (it needs Lirc
+* a simple infrared LED connected to a pin of [Arietta G25](https://www.acmesystems.it/arietta) (it needs Lirc)
 
 All has been tested using both Python 2 and 3 on a Linux PC, on Raspberry Pi and on Arietta G25, all Linux based systems :penguin: 
 I'm confident that all can work also on Windows systems.
