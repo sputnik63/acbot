@@ -78,7 +78,7 @@ class Transmitter(object):
 
     def createHexSeq(self, s1, codesToSend):
         """
-        Create and hex sequence of values used by IrToy only
+        Create the hex sequence of values used by IrToy only
         """
         for i in s1:
             logger.debug("pulse\t%3d %s" % (self.PULSE, self.formatVal(self.PULSE)))
@@ -97,7 +97,8 @@ class Transmitter(object):
 
     def createBinarySeq(self, status, fan, mode, swing, temp):
         """
-        Create the binary string corresponding to the parameters set
+        Create the binary string corresponding to the parameters
+        set on the remote control
         """
         tempStr = str(temp)
         val = [[0,0,0,0,0,0],[0,0,0,0,0,0]]
@@ -207,7 +208,7 @@ class IRTOY(Transmitter):
 
     def activate(self, status, fan, mode, swing, temp):
         """
-        Generate the hex sequence to send to the IrToy device
+        Create the command sequence and send it to the device
         """
 
         # first generate the binary values
@@ -232,6 +233,8 @@ class IRTOY(Transmitter):
             codesToSend.append(i)
         for i in self.formatVal(self.PULSE):
             codesToSend.append(i)
+        # NOTE: the following couple of 255 should be sent
+        # in the protocol but sometimes it locks the IrToy
         #codesToSend.append(255)
         #codesToSend.append(255)
         #logger.debug("space\t1000000 (255, 255)")
@@ -330,7 +333,7 @@ class RASPI_GPIO(Transmitter):
 
     def activate(self, status, fan, mode, swing, temp):
         """
-        Generate the binary sequence to use with pigpio or Lirc
+        Create the command sequence and send it to the device
         """
         binarySeq = self.createBinarySeq(status, fan, mode, swing, temp)
         logger.debug("Payload: " + binarySeq)
@@ -360,10 +363,8 @@ class LIRC(Transmitter):
 
     def activate(self, status, fan, mode, swing, temp):
         """
-        Generate the binary sequence to use with Lirc
+        Create the command sequence and send it to the device
         """
-        binarySeq = self.createBinarySeq(status, fan, mode, swing, temp)
-        logger.debug("Payload: " + binarySeq)
 
         # use Lirc
         seq = [status, fan, mode, swing, str(temp)]
